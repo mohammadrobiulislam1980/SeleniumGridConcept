@@ -13,10 +13,11 @@ public class SeleniumGridTestConcept {
 	public static void main(String[] args) throws MalformedURLException {
 	DesiredCapabilities cap=DesiredCapabilities.chrome();
 	cap.setPlatform(Platform.WIN10);
-	URL url=new URL ("http://192.168.81.1:18297/wd/hub");
+	URL url=new URL ("http://192.168.81.1:12033/wd/hub");
 	WebDriver driver=new RemoteWebDriver(url, cap);
-	driver.get("https://www.google.com");
+	driver.get("https://www.facebook.com");
 	System.out.println(driver.getTitle());
+	System.out.println(driver.getCurrentUrl());
 	driver.close();
 	driver.quit();
 	

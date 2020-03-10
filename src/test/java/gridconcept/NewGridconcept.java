@@ -10,16 +10,15 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class NewGridconcept {
 
-	
-		public static void main(String[] args) throws MalformedURLException {
-			DesiredCapabilities cap=DesiredCapabilities.chrome();
-			cap.setPlatform(Platform.WIN10);
-			URL url=new URL ("http://192.168.81.1:18297/wd/hub");
-			WebDriver driver=new RemoteWebDriver(url, cap);
-			driver.get("https://www.google.com");
-			System.out.println(driver.getTitle());
-			driver.close();
-			driver.quit();
+	public static void main(String[] args) throws MalformedURLException {
+		DesiredCapabilities cap = DesiredCapabilities.chrome();
+		cap.setPlatform(Platform.WIN10);
+		URL url = new URL("http://192.168.81.1:12033/wd/hub");
+		WebDriver driver = new RemoteWebDriver(url, cap);
+		driver.get("https://www.google.com");
+		System.out.println(driver.getTitle());
+		driver.close();
+		driver.quit();
 	}
 
 }
